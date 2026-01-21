@@ -20,6 +20,12 @@
     <li><a href="#about">Nosotros</a></li>
     <li><a href="#contactanos">Contacto</a></li>
   </ul>
+  <button class="theme-toggle" id="theme-toggle" aria-label="Cambiar a modo oscuro">
+    <i class="bi bi-moon"></i>
+  </button>
+  <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+    <i class="bi bi-list"></i>
+  </button>
 </nav>
 
     <main class="site-wrap" id="home">
@@ -192,6 +198,33 @@
     <p>&copy; 2026 GatosCare. Todos los derechos reservados.</p>
   </div>
 </footer>
+<script>
+  const toggle = document.getElementById('theme-toggle');
+  const icon = toggle.querySelector('i');
+  const root = document.body;
+  const stored = localStorage.getItem('theme');
+  const navToggle = document.getElementById('nav-toggle');
+  const navLinks = document.querySelector('.nav-links');
+  const applyTheme = (mode) => {
+    root.setAttribute('data-theme', mode);
+    const isDark = mode === 'dark';
+    icon.className = isDark ? 'bi bi-sun' : 'bi bi-moon';
+    toggle.setAttribute('aria-label', isDark ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro');
+  };
+  applyTheme(stored || 'light');
+  toggle.addEventListener('click', () => {
+    const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    applyTheme(next);
+    localStorage.setItem('theme', next);
+  });
+
+  navToggle.addEventListener('click', () => {
+    const isOpen = navLinks.classList.toggle('is-open');
+    navToggle.setAttribute('aria-expanded', isOpen);
+    navToggle.setAttribute('aria-label', isOpen ? 'Cerrar menú' : 'Abrir menú');
+    navToggle.querySelector('i').className = isOpen ? 'bi bi-x' : 'bi bi-list';
+  });
+</script>
     
 </body>
 </html>
