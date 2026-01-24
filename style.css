@@ -210,7 +210,8 @@ body[data-theme="dark"] .nav-toggle:hover {
 }
 
 /* Estilos para los botones */
-.hero-buttons button {
+.hero-buttons button,
+.hero-buttons .hero-link {
   background-color: var(--accent);
   color: var(--btn-text);
   border: none;
@@ -220,10 +221,15 @@ body[data-theme="dark"] .nav-toggle:hover {
   cursor: pointer;
   font-size: 16px;
   transition: filter 0.3s, transform 0.2s;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 
-.hero-buttons button:hover {
+.hero-buttons button:hover,
+.hero-buttons .hero-link:hover {
   filter: brightness(0.9);
   transform: translateY(-1px);
 }
@@ -448,13 +454,14 @@ body[data-theme="dark"] .nav-toggle:hover {
   color: var(--muted);
 }
 .btn-wa {
-  background: #25d366;
-  color: #fff;
+  background: #0f7b3a;
+  color: #ffffff;
   padding: 12px 24px;
   border-radius: 6px;
   text-decoration: none;
   font-weight: 600;
   margin-top: 10px;
+  box-shadow: 0 2px 8px rgba(15, 123, 58, 0.25);
 }
 
 /* ---------- Columna derecha ---------- */
@@ -530,6 +537,8 @@ footer {
   color: var(--text);
   text-decoration: none;
   font-size: .85rem;
+  padding: 8px 6px;
+  min-height: 44px;
 }
 .enlaces-rapidos a:hover {
   color: var(--accent);
