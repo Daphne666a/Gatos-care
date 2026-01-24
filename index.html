@@ -4,14 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net/npm" crossorigin>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"/>
+    <link rel="preload" as="image" href="gato_1.webp">
 
     <title>GatosCare</title>
 </head>
 <body>
    <nav class="site-nav">
   <div class="nav-logo">
-    <img src="logo_gatoscare.jpg" alt="GatosCare Logo" class="logo-image">
+    <picture>
+      <source type="image/webp" srcset="logo_gatoscare.webp">
+      <img src="logo_gatoscare.jpg" alt="GatosCare Logo" class="logo-image" width="220" height="220" decoding="async">
+    </picture>
   </div>
 
   <ul class="nav-links" id="estilo">
@@ -31,7 +37,10 @@
     <main class="site-wrap" id="home">
         <div class="hero">
  
-  <img src="gato_1.jpg" alt="Gato feliz" class="gato-image-presentation">
+  <picture>
+    <source type="image/webp" srcset="gato_1.webp">
+    <img src="gato_1.jpg" alt="Gato feliz" class="gato-image-presentation" width="360" height="360" decoding="async" fetchpriority="high">
+  </picture>
 
  
   <div class="hero-text">
@@ -48,12 +57,18 @@
             <h2>Nuestros Servicios</h2>
             <div class="servicios-wrapper"> 
             <div class="tarjeta">
-                <img src="gato_2.jpg" alt="Gato feliz" class="gato-image-presentation1"> 
+                <picture>
+                  <source type="image/webp" srcset="gato_2.webp">
+                  <img src="gato_2.jpg" alt="Gato feliz" class="gato-image-presentation1" width="600" height="160" loading="lazy" decoding="async"> 
+                </picture>
                 <div class="cabecera"><i class="bi bi-hospital"></i> <h3>Visitas veterinarias a domicilio </h3> </div>
                 <p>Consultas médicas, vacunación y control de salud periódico y a domicilio.</p>
                 </div>
             <div class="tarjeta"> 
-                <img src="gato_3.jpg" alt="Gato feliz" class="gato-image-presentation2">
+                <picture>
+                  <source type="image/webp" srcset="gato_3.webp">
+                  <img src="gato_3.jpg" alt="Gato feliz" class="gato-image-presentation2" width="600" height="160" loading="lazy" decoding="async">
+                </picture>
                 <div class="cabecera"> <i class="bi bi-scissors"></i>
                 <h3> Peluquería y cuidado del pelaje </h3> </div>
                 <p>Servicio de baño, corte de uñas y cepillado profesional para mantener a tu gato impecable.</p>
@@ -61,12 +76,18 @@
                  </div>
                  <div class="servicios-wrapper">
             <div class="tarjeta"> 
-                <img src="gato_4.jpg" alt="Gato feliz" class="gato-image-presentation3">
+                <picture>
+                  <source type="image/webp" srcset="gato_4.webp">
+                  <img src="gato_4.jpg" alt="Gato feliz" class="gato-image-presentation3" width="600" height="160" loading="lazy" decoding="async">
+                </picture>
                 <div class="cabecera"> <i class="bi bi-suit-heart-fill"></i> <h3>Asesoramiento en nutrición felina</h3></div>
                 <p>Planes alimenticios personalizados según las necesidades de tu gato</p>
                  </div>
             <div class="tarjeta"> 
-                <img src="gato_5.jpg" alt="Gato feliz" class="gato-image-presentation4">
+                <picture>
+                  <source type="image/webp" srcset="gato_5.webp">
+                  <img src="gato_5.jpg" alt="Gato feliz" class="gato-image-presentation4" width="600" height="160" loading="lazy" decoding="async">
+                </picture>
                 <div class="cabecera"><i class="bi bi-house"></i><h3>Entrenamiento y comportamiento</h3></div>
                 <p>Espacio seguro y cómodo para que tu gato se quede mientras estás fuera.</p>
                  </div>
@@ -78,7 +99,10 @@
         <h2>Sobre Nosotros</h2>
   <div class="sobre-nosotros-content">
     <div class="logo">
-      <img src="logo_gatoscare.jpg" alt="logo de la institución" class="logo-institución">
+      <picture>
+        <source type="image/webp" srcset="logo_gatoscare.webp">
+        <img src="logo_gatoscare.jpg" alt="logo de la institución" class="logo-institución" width="320" height="320" loading="lazy" decoding="async">
+      </picture>
     </div>
 
     <p>GatosCare nació en el 2010 con una misión clara: Proporcionar el mejor cuidado posible para los gatos de nuestra comunidad. Somos un equipo de amantes de los felinos comprometidos con su bienestar.</p>
