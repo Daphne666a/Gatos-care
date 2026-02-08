@@ -28,7 +28,7 @@ body[data-theme="dark"] {
   --btn-text: #0b1222;
   --nav-bg: #0f172a;
   --footer-bg: #0d1629;
-  --shadow: 0 4px 20px rgba(0,0,0,0.25);
+  --shadow: 0 8px 22px rgba(255, 255, 255, 0.14);
 }
 
 body {
@@ -36,6 +36,27 @@ body {
     color: var(--text);
     margin: 0;
     padding-top: 50px; /* Añade espacio en la parte superior para que el contenido no quede oculto detrás de la barra de navegación fija */
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  transition-delay: var(--reveal-delay, 0s);
+  will-change: opacity, transform;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }
 
 .Servicios,
@@ -192,7 +213,7 @@ body[data-theme="dark"] .nav-toggle:hover {
   height: clamp(260px, 28vw, 360px);
   border-radius: 50%;
   object-fit: cover;
-  box-shadow: 0 5px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow);
 }
 
 .hero-text {
@@ -468,7 +489,7 @@ body[data-theme="dark"] .nav-toggle:hover {
   text-decoration: none;
   font-weight: 600;
   margin-top: 10px;
-  box-shadow: 0 2px 8px rgba(15, 123, 58, 0.25);
+  box-shadow: var(--shadow);
 }
 
 /* ---------- Columna derecha ---------- */
